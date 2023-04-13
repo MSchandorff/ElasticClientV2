@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CsvHelper/30.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Elastic.Clients.Elasticsearch/8.0.8": {
         "type": "package",
         "dependencies": {
@@ -132,6 +145,30 @@
     }
   },
   "libraries": {
+    "CsvHelper/30.0.1": {
+      "sha512": "rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "type": "package",
+      "path": "csvhelper/30.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.30.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "Elastic.Clients.Elasticsearch/8.0.8": {
       "sha512": "+yYqhn2roenoM9abmpz7S5DuXtFkqbqr+eon3kIbSps4TsQYx3BMWScXwmRtocgVfFHggN+Uzkc591qvXwruuw==",
       "type": "package",
@@ -423,23 +460,24 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CsvHelper >= 30.0.1",
       "Elastic.Clients.Elasticsearch >= 8.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miksc\\.nuget\\packages\\": {}
+    "C:\\Users\\Mikkel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\Library\\Library.csproj",
+      "projectUniqueName": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\miksc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\Library\\obj\\",
+      "projectPath": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\Mikkel\\.nuget\\packages\\",
+      "outputPath": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\miksc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mikkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -465,6 +503,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[30.0.1, )"
+          },
           "Elastic.Clients.Elasticsearch": {
             "target": "Package",
             "version": "[8.0.8, )"
@@ -486,7 +528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

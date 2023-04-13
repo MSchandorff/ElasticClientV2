@@ -1,5 +1,6 @@
 ﻿using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
+using Library.Models;
 
 namespace Library
 {
@@ -10,7 +11,7 @@ namespace Library
         {
             if (_client == null)
             {
-                var settings = new ElasticsearchClientSettings(new Uri("https://localhost:9200"));
+                var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"));
 
                 _client = new ElasticsearchClient(settings);
             }
@@ -20,20 +21,49 @@ namespace Library
         public ElasticsearchClient _client { get; set; }
 
 
-        public async Task TestDataIndex()
+        public void TestDataIndex()
         {
-            var data = new TestData
+            var data = new List<TestData>()
             {
-                StringProperty = "value123"
+                //new TestData
+                //{
+                //Id = 1,
+                //LogTime = DateTime.Now,
+                //StepNo = 1400,
+                //CircuitName = "R1.1",
+                //TMP1 = 20.38,
+                //TMP2 = 20.06,
+                //B31 = 19.90909,
+                //B32 = 19.80357,
+                //B21 = 19.73058,
+                //B22 = 20.0036,
+                //P101 = 173.0111,
+                //RegulatorSP = 20,
+                //RegulatorFB = 0
+                //}
             };
 
-            var Response = await _client
-                .IndexAsync(document, "my-document-index");
+            var Response = _client
+                .Bulk(b => b.Index("test2").IndexMany<TestData>(data));
 
-            //if (Response.IsValidResponse)
-            //{
-            //    Console.WriteLine($"Index document with ID {indexResponse.Id} succeeded.");
-            //}
+            if (!Response.IsValidResponse)
+            {
+                // Handle errors
+                var debugInfo = Response.DebugInformation;
+                var error = Response.ElasticsearchServerError.Error;
+            }
+        }
+
+        public void IndexData(List<TestResult> data)
+        {
+            var Response = _client
+                .Bulk(b => b.Index("test2").IndexMany<TestResult>(data));
+
+            if (!Response.IsValidResponse)
+            {
+                var debugInfo = Response.DebugInformation;
+                var error = Response.ElasticsearchServerError.Error;
+            }
         }
     }
 }

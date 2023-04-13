@@ -640,19 +640,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\miksc\\.nuget\\packages\\": {}
+    "C:\\Users\\Mikkel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\ElasticClientNolek\\ElasticClientNolek.csproj",
+      "projectUniqueName": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\ElasticClientNolek\\ElasticClientNolek.csproj",
       "projectName": "ElasticClientNolek",
-      "projectPath": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\ElasticClientNolek\\ElasticClientNolek.csproj",
-      "packagesPath": "C:\\Users\\miksc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miksc\\source\\repos\\ElasticClientNolek\\ElasticClientNolek\\obj\\",
+      "projectPath": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\ElasticClientNolek\\ElasticClientNolek.csproj",
+      "packagesPath": "C:\\Users\\Mikkel\\.nuget\\packages\\",
+      "outputPath": "F:\\Projects\\VS\\ElasticClientV2\\ElasticClientNolek\\ElasticClientNolek\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\miksc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mikkel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -706,7 +706,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

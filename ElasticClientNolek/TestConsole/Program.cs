@@ -2,7 +2,8 @@
 using Library.Models;
 using System.IO;
 
-var path = "F:\\Nolek mock data\\Marcus-Test-Data";
+//var path = "F:\\Nolek mock data\\Marcus-Test-Data";
+var path = "C:\\Users\\miksc\\Desktop\\NolekData\\Marcus-Test-Data";
 var result = new List<TestResult>();
 
 if (Directory.Exists(path))

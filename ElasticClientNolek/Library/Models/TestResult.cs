@@ -14,6 +14,7 @@ namespace Library.Models
             {
                 LogTime = logTime;
             }
+            Id = Guid.NewGuid().ToString();
             StepNo = testData.StepNo;
             CircuitName = testData.CircuitName;
             TMP1 = testData.TMP1;
@@ -27,7 +28,7 @@ namespace Library.Models
             RegulatorFB = testData.RegulatorFB;
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public DateTime LogTime { get; set; }
         public int StepNo { get; set; }
         public string CircuitName { get; set; }

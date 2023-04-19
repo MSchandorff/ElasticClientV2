@@ -56,13 +56,13 @@ namespace Library
 
         public void IndexData(List<TestResult> data)
         {
-            var Response = _client
+            var response = _client
                 .Bulk(b => b.Index("test2").IndexMany<TestResult>(data));
 
-            if (!Response.IsValidResponse)
+            if (!response.IsValidResponse)
             {
-                var debugInfo = Response.DebugInformation;
-                var error = Response.ElasticsearchServerError.Error;
+                var debugInfo = response.DebugInformation;
+                var error = response.ElasticsearchServerError.Error;
             }
         }
     }
